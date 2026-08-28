@@ -10,27 +10,27 @@ def registrar_equipo():
     nombre = input("Ingrese el nombre del equipo: ").strip().upper()
 
     if nombre in equipos:
-        print("❌ El equipo ya está registrado.")
+        print("El equipo ya está registrado.")
     else:
         equipos[nombre] = []
-        print("✅ Equipo registrado correctamente.")
+        print("Equipo registrado correctamente.")
 
 
 def registrar_jugador():
     equipo = input("Ingrese el nombre del equipo al que pertenece el jugador: ").strip().upper()
 
     if equipo not in equipos:
-        print("❌ El equipo no existe. Registre primero el equipo.")
+        print("El equipo no existe. Registre primero el equipo.")
         return
 
     jugador = input("Ingrese el nombre del jugador: ").strip().upper()
 
     if jugador in jugadores_registrados:
-        print("❌ El jugador ya está registrado.")
+        print("El jugador ya está registrado.")
     else:
         equipos[equipo].append(jugador)
         jugadores_registrados.add(jugador)
-        print("✅ Jugador registrado correctamente en el equipo.")
+        print("Jugador registrado correctamente en el equipo.")
 
 
 def mostrar_torneo():
@@ -70,7 +70,7 @@ def menu():
             print("Saliendo del sistema...")
             break
         else:
-            print("❌ Opción inválida")
+            print("Opción inválida")
 
 
 menu()
